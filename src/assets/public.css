@@ -1,0 +1,21 @@
+  .mainFlexColumn{
+	 
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  flex-direction: column;
+  }
+  
+  .mainFlexRow{
+  	 
+  	  display: flex;
+  	  justify-content: center;
+  	  align-items: center;
+  	  flex-direction: row;
+  }
+  .FlexOne{
+	  flex: 1;
+  }
+  .FlexSix{
+	  flex: 6;
+  }

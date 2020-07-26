@@ -1,10 +1,11 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
 	<CirclePoccess></CirclePoccess>
-	 <img alt="Vue logo" src="./assets/logo.png">
+	 <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
 	 <ButtonI></ButtonI>
+	 <Transaction content="hello"money="-12" ></Transaction>
 	 <SeveviceItem style="width: 100px;height: 100px;"></SeveviceItem>
   </div>
 </template>
@@ -15,13 +16,15 @@ import HelloWorld from './components/HelloWorld.vue'
 import  CirclePoccess from './components/CirclePoccessItem.vue'
 import  SeveviceItem from './components/SeveviceItem.vue'
 import ButtonI from "./components/ButtonI.vue"
+import Transaction from "./components/Transaction.vue"
 export default {
   name: 'app',
   components: {
     HelloWorld,
 	CirclePoccess,
 	SeveviceItem,
-	ButtonI
+	ButtonI,
+	Transaction
   }
 }
 </script>
