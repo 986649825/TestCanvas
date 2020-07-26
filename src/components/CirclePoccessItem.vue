@@ -1,5 +1,5 @@
 <template>
-	<canvas id="canvas" width="200" height="100" style="border:1px solid #c3c3c3;">
+	<canvas id="canvas"  width="100" height="100" >
 	Your browser does not support the canvas element.
 	</canvas>
 </template>
@@ -28,8 +28,8 @@
 	      console.log("初始化canvas")
 	      canvas = document.getElementById('canvas');
 	      ctx = canvas.getContext('2d');
-	      canvas.width = window.innerWidth
-	      canvas.height = window.innerHeight
+	      canvas.width = "200";
+	      canvas.height = "200";
 	      this.drawCircle()
 	    },
 	    drawSmile() {
@@ -44,8 +44,10 @@
 	      ctx.stroke();
 	    },
 		drawCircle(){
-			  var x=48;
-			  var y=48;
+			// document.getElemntById("canvas").setAttribute("width","200px")
+			// document.getElemntById("canvas").setAttribute("height","200px")
+			//   var x=48;
+		
 			// 将绘图区域清空,如果是第一次在这个画布上画图,画布上没有东西,这步就不需要了
 			    ctx.clearRect(0, 0, 48, 48);
 			     
@@ -109,8 +111,8 @@
 				ctx.textAlign = 'center';
 				ctx.textBaseline = 'middle';
 				ctx.moveTo(this.x, this.y);
-				ctx.fillText("51%", this.x, this.y-10);
-				ctx.fillText("51%", this.x, this.y+10);
+				ctx.fillText("51%", this.x, this.y-8);
+				ctx.fillText("51%", this.x, this.y+8);
 				// ctx.font = "bold 9pt Arial";
 				// ctx.fillStyle = '#e74c3c';
 				// ctx.textAlign = 'center';
@@ -124,8 +126,8 @@
 </script>
 
 <style>
-	.canvas {
-	  width: 100vw;
-	  height: 100vh;
-	}
+	/* canvas {
+	  width: 20rem;
+	  height: 20rem;
+	} */
 </style>
