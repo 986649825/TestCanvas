@@ -15,7 +15,8 @@
 				y: 100,
 				radius: 50,
 				list:[0,10,50,89,100],
-				color:["red","green","plum","pink","palevioletred","palegreen"]
+				color:["red","green","plum","pink","palevioletred","palegreen"],
+			    lineWidth:15
 			}
 		},
 		mounted() {
@@ -46,9 +47,12 @@
 				ctx.arc(90, 65, 5, 0, Math.PI * 2, true); // 右眼
 				ctx.stroke();
 			},
+			/**
+			 * 根据数据百分图表
+			 */
 			drawCircleByStoke() {
 				ctx.lineCap = "round";
-				ctx.lineWidth = 15;
+				ctx.lineWidth = this.lineWidth;
 				var list=this.list;
 				for(var i=0;i<this.list.length;i++){
 					
@@ -69,25 +73,9 @@
 					
 					
 				}
-				// ctx.beginPath();
+				
                 
-				// ctx.arc(this.x, this.y, 50, 0, Math.PI / 2, false);
-				// ctx.strokeStyle = '#444';
-				// ctx.stroke();
-
-				// ctx.beginPath();
-				// ctx.arc(this.x, this.y, 50, Math.PI / 2, Math.PI, false);
-				// ctx.strokeStyle = 'red';
-				// ctx.stroke();
-				// ctx.beginPath();
-				// ctx.arc(this.x, this.y, 50, Math.PI, Math.PI * 1.5, false);
-				// ctx.strokeStyle = 'green';
-				// ctx.stroke();
-
-				// ctx.beginPath();
-				// ctx.arc(this.x, this.y, 50, Math.PI * 1.5, Math.PI * 2, false);
-				// ctx.strokeStyle = 'red';
-				// ctx.stroke();
+				
 				// 写文字
 				ctx.font = "bold 9pt Arial";
 				ctx.fillStyle = '#e74c3c';
