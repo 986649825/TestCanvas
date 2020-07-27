@@ -1,5 +1,8 @@
 <template>
-	<div class="main">
+	<div class="card mainFlexColumn">
+		<span></span>
+		<span></span>
+		<span></span>
 		
 		
 	</div>
@@ -9,7 +12,7 @@
 </script>
 
 <style>
-	.main{
+	.card{
 		height: 6.25rem;
 	}
 	

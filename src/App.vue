@@ -14,7 +14,7 @@
 	import "./assets/public.css"
 import HelloWorld from './components/HelloWorld.vue'
 import  CirclePoccess from './components/CirclePoccessItem.vue'
-import  SeveviceItem from './components/SeveviceItem.vue'
+import  ServiceItem from './components/ServiceItem.vue'
 import ButtonI from "./components/ButtonI.vue"
 import Transaction from "./components/Transaction.vue"
 export default {
@@ -22,7 +22,7 @@ export default {
   components: {
     HelloWorld,
 	CirclePoccess,
-	SeveviceItem,
+	ServiceItem,
 	ButtonI,
 	Transaction
   }

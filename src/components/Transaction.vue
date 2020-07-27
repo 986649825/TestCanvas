@@ -1,5 +1,5 @@
 <template>
-	<div class="mainFlexRow mainItem " >
+	<div class="Transcation mainFlexRow " >
 		<img class="FlexOne" :src="image" />
 		<span class="FlexSix">{{content}}</span>
 		<span class="FlexOne" :style="{color:isRed==false?'red':'green'}">{{money}}</span>
@@ -31,7 +31,7 @@
 </script>
 
 <style>
-	.mainItem{
+	.Transcation{
 		width: 100vw;
 		height: 6.25rem;
 	}

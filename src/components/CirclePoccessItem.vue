@@ -158,7 +158,7 @@
 
 
 				//在中间写字
-				ctx.font = "bold 9pt Arial";
+				ctx.font = "bold 14pt Arial";
 				ctx.fillStyle = '#e74c3c';
 				ctx.textAlign = 'center';
 				ctx.textBaseline = 'middle';
