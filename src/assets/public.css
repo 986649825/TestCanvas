@@ -19,10 +19,28 @@
   }
   .FlexTwo{
   	  flex: 2;
+  } 
+  .FlexThree{
+  	  flex: 3;
   }
   .FlexSix{
 	  flex: 6;
   }
   .Button{
 	  
+  }
+  
+  .marginMLeft{
+	  margin-left: 0.625rem;
+	  margin-top: 0.3125rem;
+	  float: left;
+  }
+  .marginMRigh{
+	  margin-right: 0.625rem;
+	  margin-top: 0.3125rem;
+	  float: right;
+  }
+  
+  .marginMTop{
+	  margin-top: 0.625rem;
   }

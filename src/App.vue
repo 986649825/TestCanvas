@@ -8,8 +8,8 @@
 		<!-- <Transaction content="hello"money="-12" ></Transaction> -->
 		<!-- <SeveviceItem style="width: 100px;height: 100px;"></SeveviceItem> -->
 		<!-- <Card></Card> -->
-		<div class="FlexTwo AppMain FlexOne">
-			<span>Card</span>
+		<div class="FlexThree AppMain ">
+			<span class="marginMLeft"><strong>Card</strong></span>
 			<div class=" cardItem">
 				<div style="flex:1;padding: 10px;" v-for="(card,index) in cardList">
 					<Card></Card>
@@ -23,8 +23,8 @@
 			<div class="leftMain FlexTwo">
 				<div class="FlexOne ServiceM" style="background-color: antiquewhite;">
     <div class="ServiceTitle">
-		<span style="margin-left: 10px;overflow: hidden;text-overflow: ellipsis"><strong>MainService</strong></span>
-		<span style="float: right;text-overflow: ellipsis">hello</span>
+		<span class="marginMLeft" style="float: left;"><strong>MainService</strong></span>
+		<span class="marginMRigh" style="float: right;text-overflow: ellipsis">hello</span>
 	</div>
 	 <!-- sevi -->
 	    <div  class="mainFlexRow ServiceMItem" style="position: relative;">
@@ -47,8 +47,20 @@
 				</div>
 			</div>
 		</div>
+		
+		
+		<!--  sidebar-->
 		<div class="FlexOne sidebar " style="">
            <CirclePoccess></CirclePoccess>
+		   <div style="width: 100%;">
+			   <span class="marginMLeft" > Transaction</span>
+			   <span class="marginMRigh" > tody</span>
+			   
+		   </div>
+		 
+		 
+		  <Transaction  v-for="(Transaction,index) in TransactionList" style="margin-top:0.625rem" image="../../assets/diqiu.png" content="hello"money="-12"  ></Transaction>
+		   <ButtonI style="margin-top: 0.625rem;margin-left: 0.625rem;margin-right: 0.625rem;"></ButtonI> 
 		</div>
 	</div>
 </template>
@@ -74,6 +86,7 @@
 			return {
 				cardList: [1, 2, 3],
 				serviceItemHeight:0,
+				TransactionList:[1,2,3],
 
 			}
 		},
