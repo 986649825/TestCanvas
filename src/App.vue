@@ -20,24 +20,41 @@
 
 
 			</div>
-			<div class="mainFlexRow FlexTwo">
-				<div class="FlexOne" style="background-color: antiquewhite;height: 100%;">
-    hel
+			<div class="leftMain FlexTwo">
+				<div class="FlexOne ServiceM" style="background-color: antiquewhite;">
+    <div class="ServiceTitle">
+		<span style="margin-left: 10px;overflow: hidden;text-overflow: ellipsis"><strong>MainService</strong></span>
+		<span style="float: right;text-overflow: ellipsis">hello</span>
+	</div>
+	 <!-- sevi -->
+	    <div  class="mainFlexRow ServiceMItem" style="position: relative;">
+			<ServiceItem style="flex:1;"></ServiceItem>
+			<ServiceItem style="flex:1;height:expression(this.clientWidth)"></ServiceItem>
+		</div>
+		
+		<div  class="mainFlexRow">
+			<ServiceItem style="flex:1; height:expression(this.clientWidth)"></ServiceItem>
+			<ServiceItem style="flex:1;height:expression(this.clientWidth)"></ServiceItem>
+		</div>
+		<div  class="mainFlexRow">
+			<ServiceItem style="flex:1;height:expression(this.clientWidth)"></ServiceItem>
+			<ServiceItem style="flex:1;height:expression(this.clientWidth)"></ServiceItem>
+		</div>
+	
 				</div>
-				<div class="FlexTwo" style="background-color: #2C3E50;height: 100%;">
-hell
+				<div class="FlexTwo" style="background-color: #2C3E50;height: 100%; position: relative;">
+                  
 				</div>
 			</div>
 		</div>
-		<div class="FlexOne sidebar">
-
+		<div class="FlexOne sidebar " style="">
+           <CirclePoccess></CirclePoccess>
 		</div>
 	</div>
 </template>
 
 <script>
 	import "./assets/public.css"
-	import HelloWorld from './components/app/HelloWorld.vue'
 	import CirclePoccess from './components/app/CirclePoccessItem.vue'
 	import ServiceItem from './components/app/ServiceItem.vue'
 	import ButtonI from "./components/app/ButtonI.vue"
@@ -46,7 +63,7 @@ hell
 	export default {
 		name: 'app',
 		components: {
-			HelloWorld,
+		
 			CirclePoccess,
 			ServiceItem,
 			ButtonI,
@@ -56,8 +73,15 @@ hell
 		data: function() {
 			return {
 				cardList: [1, 2, 3],
+				serviceItemHeight:0,
 
 			}
+		},
+		mounted() {
+		
+		},
+		methods:function(){
+			
 		}
 	}
 </script>
@@ -67,7 +91,7 @@ hell
 		font-family: 'Avenir', Helvetica, Arial, sans-serif;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
-		text-align: center;
+		/* text-align: center; */
 		color: #2c3e50;
 		margin-top: 60px;
 		background-color: lightgrey;
@@ -75,7 +99,7 @@ hell
 		display: flex;
 		flex-direction: row;
 	}
-
+      
 	.AppMain {
 		display: flex;
 		flex-direction: column;
@@ -85,8 +109,13 @@ hell
 	.sidebar {
 		background-color: beige;
 		border-radius: 0.625rem;
+		text-align: center;
+		/* display: flex; */
+		/* align-items: center; */
+		
 	}
-
+	
+     
 	.cardItem {
 		display: flex;
 		flex-direction: row;
@@ -94,8 +123,32 @@ hell
 		/* Safari 6.1+ */
 		display: flex;
 		justify-content: space-around;
+		
 
 	}
-
+	/**
+	 * sevice 和 折线图
+	 */
+	.leftMain{
+		display: flex;
+	   
+		
+	}
+	
+	.ServiceM{
+		
+		border-radius: 0.55rem;
+		
+	}
+	.ServiceTitle{
+		width: 100%;
+		overflow: hidden;
+		
+	}
+	
+    .ServiceMItem{
+		justify-content: space-around;
+		-webkit-justify-content: space-around;
+	}
 	.card Card {}
 </style>
