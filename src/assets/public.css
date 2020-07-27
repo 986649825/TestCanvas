@@ -16,6 +16,12 @@
   .FlexOne{
 	  flex: 1;
   }
+  .FlexTwo{
+  	  flex: 2;
+  }
   .FlexSix{
 	  flex: 6;
+  }
+  .Button{
+	  
   }
