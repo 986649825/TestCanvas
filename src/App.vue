@@ -1,15 +1,9 @@
 <template>
 	<div id="app">
-		<!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-		<!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-		<!-- <CirclePoccess></CirclePoccess>
-	 <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-		<!-- <ButtonI></ButtonI> -->
-		<!-- <Transaction content="hello"money="-12" ></Transaction> -->
-		<!-- <SeveviceItem style="width: 100px;height: 100px;"></SeveviceItem> -->
-		<!-- <Card></Card> -->
+	
 		<div class="FlexThree AppMain ">
-			<span class="marginMLeft"><strong>Card</strong></span>
+			<!-- <span class="marginMLeft"><strong>Card</strong></span> -->
+			<MTitle></MTitle>
 			<div class=" cardItem">
 				<div style="flex:1;padding: 10px;" v-for="(card,index) in cardList">
 					<Card></Card>
@@ -22,45 +16,47 @@
 			</div>
 			<div class="leftMain FlexTwo">
 				<div class="FlexOne ServiceM" style="background-color: antiquewhite;">
-    <div class="ServiceTitle">
-		<span class="marginMLeft" style="float: left;"><strong>MainService</strong></span>
-		<span class="marginMRigh" style="float: right;text-overflow: ellipsis">hello</span>
-	</div>
-	 <!-- sevi -->
-	    <div  class="mainFlexRow ServiceMItem" style="position: relative;">
-			<ServiceItem style="flex:1;"></ServiceItem>
-			<ServiceItem style="flex:1;height:expression(this.clientWidth)"></ServiceItem>
-		</div>
-		
-		<div  class="mainFlexRow">
-			<ServiceItem style="flex:1; height:expression(this.clientWidth)"></ServiceItem>
-			<ServiceItem style="flex:1;height:expression(this.clientWidth)"></ServiceItem>
-		</div>
-		<div  class="mainFlexRow">
-			<ServiceItem style="flex:1;height:expression(this.clientWidth)"></ServiceItem>
-			<ServiceItem style="flex:1;height:expression(this.clientWidth)"></ServiceItem>
-		</div>
-	
+					<div class="ServiceTitle">
+						<span class="marginMLeft" style="float: left;"><strong>MainService</strong></span>
+						<span class="marginMRigh" style="float: right;text-overflow: ellipsis">hello</span>
+					</div>
+
+
+					<!-- sevi -->
+					<div class="mainFlexRow ServiceMItem" style="position: relative;">
+						<ServiceItem style="flex:1;"></ServiceItem>
+						<ServiceItem style="flex:1;height:expression(this.clientWidth)"></ServiceItem>
+					</div>
+
+					<div class="mainFlexRow">
+						<ServiceItem style="flex:1; height:expression(this.clientWidth)"></ServiceItem>
+						<ServiceItem style="flex:1;height:expression(this.clientWidth)"></ServiceItem>
+					</div>
+					<div class="mainFlexRow">
+						<ServiceItem style="flex:1;height:expression(this.clientWidth)"></ServiceItem>
+						<ServiceItem style="flex:1;height:expression(this.clientWidth)"></ServiceItem>
+					</div>
+
 				</div>
-				<div class="FlexTwo" style="background-color: #2C3E50;height: 100%; position: relative;">
-                  
+				<div class="FlexTwo" style="background-color:#FFFFFF;height: 100%; position: relative;">
+					<MTitle></MTitle>
 				</div>
 			</div>
 		</div>
-		
-		
+
+
 		<!--  sidebar-->
 		<div class="FlexOne sidebar " style="">
-           <CirclePoccess></CirclePoccess>
-		   <div style="width: 100%;">
-			   <span class="marginMLeft" > Transaction</span>
-			   <span class="marginMRigh" > tody</span>
-			   
-		   </div>
-		 
-		 
-		  <Transaction  v-for="(Transaction,index) in TransactionList" style="margin-top:0.625rem" image="../../assets/diqiu.png" content="hello"money="-12"  ></Transaction>
-		   <ButtonI style="margin-top: 0.625rem;margin-left: 0.625rem;margin-right: 0.625rem;"></ButtonI> 
+			<MTitle></MTitle>
+			<CirclePoccess></CirclePoccess>
+		
+
+			<MTitle></MTitle>
+
+
+			<Transaction v-for="(Transaction,index) in TransactionList" style="margin-top:0.625rem" image="../../assets/diqiu.png"
+			 content="hello" money="-12"></Transaction>
+			<ButtonI style="margin-top: 0.625rem;margin-left: 0.625rem;margin-right: 0.625rem;"></ButtonI>
 		</div>
 	</div>
 </template>
@@ -72,29 +68,31 @@
 	import ButtonI from "./components/app/ButtonI.vue"
 	import Transaction from "./components/app/Transaction.vue"
 	import Card from "./components/app/Card.vue"
+	import MTitle from "./components/app/MTiltle.vue"
 	export default {
 		name: 'app',
 		components: {
-		
+
 			CirclePoccess,
 			ServiceItem,
 			ButtonI,
 			Transaction,
-			Card
+			Card,
+			MTitle
 		},
 		data: function() {
 			return {
 				cardList: [1, 2, 3],
-				serviceItemHeight:0,
-				TransactionList:[1,2,3],
+				serviceItemHeight: 0,
+				TransactionList: [1, 2, 3],
 
 			}
 		},
 		mounted() {
-		
+
 		},
-		methods:function(){
-			
+		methods: function() {
+
 		}
 	}
 </script>
@@ -112,7 +110,7 @@
 		display: flex;
 		flex-direction: row;
 	}
-      
+
 	.AppMain {
 		display: flex;
 		flex-direction: column;
@@ -125,10 +123,10 @@
 		text-align: center;
 		/* display: flex; */
 		/* align-items: center; */
-		
+
 	}
-	
-     
+
+
 	.cardItem {
 		display: flex;
 		flex-direction: row;
@@ -136,32 +134,35 @@
 		/* Safari 6.1+ */
 		display: flex;
 		justify-content: space-around;
-		
+
 
 	}
+
 	/**
 	 * sevice 和 折线图
 	 */
-	.leftMain{
+	.leftMain {
 		display: flex;
-	   
-		
+
+
 	}
-	
-	.ServiceM{
-		
+
+	.ServiceM {
+
 		border-radius: 0.55rem;
-		
+
 	}
-	.ServiceTitle{
+
+	.ServiceTitle {
 		width: 100%;
 		overflow: hidden;
-		
+
 	}
-	
-    .ServiceMItem{
+
+	.ServiceMItem {
 		justify-content: space-around;
 		-webkit-justify-content: space-around;
 	}
+
 	.card Card {}
 </style>
