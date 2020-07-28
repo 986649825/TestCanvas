@@ -10,7 +10,7 @@
 					</div>
 				</div>
 				<div class="leftMain FlexTwo">
-					<div class="FlexOne ServiceM">
+					<div class="FlexOne ServiceM ">
 						<div class="ServiceTitle">
 							<span class="marginMLeft" style="float: left;"><strong>MainService</strong></span>
 							<span class="marginMRigh" style="float: right;text-overflow: ellipsis">hello</span>
@@ -20,21 +20,24 @@
 						<!-- sevice-->
 						<div class="mainFlexRow ServiceMItem" style="position: relative;">
 							<ServiceItem style="flex:1;"></ServiceItem>
-							<ServiceItem style="flex:1;height:expression(this.clientWidth)"></ServiceItem>
+							<ServiceItem style="flex:1;"></ServiceItem>
 						</div>
 
 						<div class="mainFlexRow">
-							<ServiceItem style="flex:1; height:expression(this.clientWidth)"></ServiceItem>
-							<ServiceItem style="flex:1;height:expression(this.clientWidth)"></ServiceItem>
+							<ServiceItem style="flex:1;"></ServiceItem>
+							<ServiceItem style="flex:1;"></ServiceItem>
 						</div>
 						<div class="mainFlexRow">
-							<ServiceItem style="flex:1;height:expression(this.clientWidth)"></ServiceItem>
-							<ServiceItem style="flex:1;height:expression(this.clientWidth)"></ServiceItem>
+							<ServiceItem style="flex:1;"></ServiceItem>
+							<ServiceItem style="flex:1;"></ServiceItem>
 						</div>
 
 					</div>
-					<div class="FlexTwo" style="background-color:#FFFFFF;height: 100%; position: relative;">
+					
+					
+					<div class=" ServiceRight FlexTwo " style="background-color:#FFFFFF;height: 100%; position: relative;">
 						<MTitle></MTitle>
+						<Current :title="123" :money="'hell'" ></Current>
 					</div>
 				</div>
 			</div>
@@ -68,6 +71,7 @@
 	import Transaction from "./components/app/Transaction.vue"
 	import Card from "./components/app/Card.vue"
 	import MTitle from "./components/app/MTiltle.vue"
+	import Current from "./components/app/Current.vue"
 	export default {
 		name: 'app',
 		components: {
@@ -77,13 +81,19 @@
 			ButtonI,
 			Transaction,
 			Card,
-			MTitle
+			MTitle,
+			Current
 		},
 		data: function() {
 			return {
 				cardList: [1, 2, 3],
 				serviceItemHeight: 0,
 				TransactionList: [1, 2, 3],
+				CurrentList:[
+					{title:'中国',money:"$1231"},
+					{title:'美国',money:"$1231"},
+					{title:'日本',money:"$1231"},
+				]
 
 			}
 		},
@@ -104,7 +114,7 @@
 		/* text-align: center; */
 		color: #2c3e50;
 		/* margin-top: 60px; */
-		background-color: lightgrey;
+		background-color: pink;
 		height: 100vh;
 		display: flex;
 		flex-direction: row;
@@ -112,12 +122,13 @@
 		align-items: center;
 		min-height: 64rem;
 		min-width: 64rem;
+		
 
 	}
 
 	.main {
 		width: 80%;
-		height: 70%;
+		height: 60%;
 		display: flex;
 		background-color: white;
 		border-radius: 1.5rem;
@@ -133,8 +144,8 @@
 	}
 
 	.sidebar {
-		background-color: beige;
-		border-radius: 0.625rem;
+		background-color: white;
+		border-radius: 1rem;
 		text-align: center;
 		/* display: flex; */
 		/* align-items: center; */
@@ -166,6 +177,7 @@
 
 		border-radius: 0.55rem;
 		background-color: aliceblue;
+		
 
 
 	}
@@ -175,10 +187,15 @@
 		overflow: hidden;
 
 	}
+	
 
 	.ServiceMItem {
 		justify-content: space-around;
 		-webkit-justify-content: space-around;
+	}
+	.ServiceRight{
+		display: flex;
+		flex-direction: column;
 	}
 
 	.card Card {}

@@ -44,3 +44,8 @@
   .marginMTop{
 	  margin-top: 0.625rem;
   }
+  .MflexCenterAlign{
+	  display: flex;
+	  
+	 justify-content: center;
+  }
