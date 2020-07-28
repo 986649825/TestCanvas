@@ -1,62 +1,61 @@
 <template>
 	<div id="app">
-	
-		<div class="FlexThree AppMain ">
-			<!-- <span class="marginMLeft"><strong>Card</strong></span> -->
-			<MTitle></MTitle>
-			<div class=" cardItem">
-				<div style="flex:1;padding: 10px;" v-for="(card,index) in cardList">
-					<Card></Card>
+		<div class="main">
+			<div class="FlexThree AppMain ">
+				<!-- <span class="marginMLeft"><strong>Card</strong></span> -->
+				<MTitle></MTitle>
+				<div class=" cardItem">
+					<div style="flex:1;padding: 10px;" v-for="(card,index) in cardList">
+						<Card></Card>
+					</div>
 				</div>
+				<div class="leftMain FlexTwo">
+					<div class="FlexOne ServiceM">
+						<div class="ServiceTitle">
+							<span class="marginMLeft" style="float: left;"><strong>MainService</strong></span>
+							<span class="marginMRigh" style="float: right;text-overflow: ellipsis">hello</span>
+						</div>
 
 
+						<!-- sevice-->
+						<div class="mainFlexRow ServiceMItem" style="position: relative;">
+							<ServiceItem style="flex:1;"></ServiceItem>
+							<ServiceItem style="flex:1;height:expression(this.clientWidth)"></ServiceItem>
+						</div>
 
+						<div class="mainFlexRow">
+							<ServiceItem style="flex:1; height:expression(this.clientWidth)"></ServiceItem>
+							<ServiceItem style="flex:1;height:expression(this.clientWidth)"></ServiceItem>
+						</div>
+						<div class="mainFlexRow">
+							<ServiceItem style="flex:1;height:expression(this.clientWidth)"></ServiceItem>
+							<ServiceItem style="flex:1;height:expression(this.clientWidth)"></ServiceItem>
+						</div>
 
-
-			</div>
-			<div class="leftMain FlexTwo">
-				<div class="FlexOne ServiceM" style="background-color: antiquewhite;">
-					<div class="ServiceTitle">
-						<span class="marginMLeft" style="float: left;"><strong>MainService</strong></span>
-						<span class="marginMRigh" style="float: right;text-overflow: ellipsis">hello</span>
 					</div>
-
-
-					<!-- sevi -->
-					<div class="mainFlexRow ServiceMItem" style="position: relative;">
-						<ServiceItem style="flex:1;"></ServiceItem>
-						<ServiceItem style="flex:1;height:expression(this.clientWidth)"></ServiceItem>
+					<div class="FlexTwo" style="background-color:#FFFFFF;height: 100%; position: relative;">
+						<MTitle></MTitle>
 					</div>
-
-					<div class="mainFlexRow">
-						<ServiceItem style="flex:1; height:expression(this.clientWidth)"></ServiceItem>
-						<ServiceItem style="flex:1;height:expression(this.clientWidth)"></ServiceItem>
-					</div>
-					<div class="mainFlexRow">
-						<ServiceItem style="flex:1;height:expression(this.clientWidth)"></ServiceItem>
-						<ServiceItem style="flex:1;height:expression(this.clientWidth)"></ServiceItem>
-					</div>
-
-				</div>
-				<div class="FlexTwo" style="background-color:#FFFFFF;height: 100%; position: relative;">
-					<MTitle></MTitle>
 				</div>
 			</div>
-		</div>
 
 
-		<!--  sidebar-->
-		<div class="FlexOne sidebar " style="">
-			<MTitle></MTitle>
-			<CirclePoccess></CirclePoccess>
-		
-
-			<MTitle></MTitle>
+			<!--  sidebar-->
+			<div class="FlexOne sidebar " style="">
+				<MTitle></MTitle>
+				<CirclePoccess></CirclePoccess>
 
 
-			<Transaction v-for="(Transaction,index) in TransactionList" style="margin-top:0.625rem" image="../../assets/diqiu.png"
-			 content="hello" money="-12"></Transaction>
-			<ButtonI style="margin-top: 0.625rem;margin-left: 0.625rem;margin-right: 0.625rem;"></ButtonI>
+				<MTitle></MTitle>
+
+
+				<Transaction v-for="(Transaction,index) in TransactionList" style="margin-top:0.625rem" image="../../assets/diqiu.png"
+				 content="hello" money="-12"></Transaction>
+				<ButtonI style="margin-top: 0.625rem;margin-left: 0.625rem;margin-right: 0.625rem;"></ButtonI>
+			
+			</div>
+			
+			
 		</div>
 	</div>
 </template>
@@ -104,16 +103,32 @@
 		-moz-osx-font-smoothing: grayscale;
 		/* text-align: center; */
 		color: #2c3e50;
-		margin-top: 60px;
+		/* margin-top: 60px; */
 		background-color: lightgrey;
 		height: 100vh;
 		display: flex;
 		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		min-height: 64rem;
+		min-width: 64rem;
+
+	}
+
+	.main {
+		width: 80%;
+		height: 70%;
+		display: flex;
+		background-color: white;
+		border-radius: 1.5rem;
+		
 	}
 
 	.AppMain {
 		display: flex;
 		flex-direction: column;
+		margin-left: 1.25rem;
+		margin-bottom: 1.25rem;
 
 	}
 
@@ -150,6 +165,8 @@
 	.ServiceM {
 
 		border-radius: 0.55rem;
+		background-color: aliceblue;
+
 
 	}
 
