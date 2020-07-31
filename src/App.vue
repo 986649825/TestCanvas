@@ -3,41 +3,48 @@
 		<div class="main">
 			<div class="FlexThree AppMain ">
 				<!-- <span class="marginMLeft"><strong>Card</strong></span> -->
+				<!-- cardList -->
 				<MTitle></MTitle>
 				<div class=" cardItem">
 					<div style="flex:1;padding: 10px;" v-for="(card,index) in cardList">
 						<Card></Card>
 					</div>
 				</div>
+				<!--  -->
 				<div class="leftMain FlexTwo">
-					<div class="FlexOne ServiceM ">
+					<!--  ServiceM-->
+					<div class="FlexOne ServiceList ">
 						<div class="ServiceTitle">
 							<span class="marginMLeft" style="float: left;"><strong>MainService</strong></span>
 							<span class="marginMRigh" style="float: right;text-overflow: ellipsis">hello</span>
 						</div>
 
 
-						<!-- sevice-->
-						<div class="mainFlexRow ServiceMItem" style="position: relative;">
-							<ServiceItem style="flex:1;"></ServiceItem>
-							<ServiceItem style="flex:1;"></ServiceItem>
-						</div>
-
-						<div class="mainFlexRow">
-							<ServiceItem style="flex:1;"></ServiceItem>
-							<ServiceItem style="flex:1;"></ServiceItem>
-						</div>
-						<div class="mainFlexRow">
-							<ServiceItem style="flex:1;"></ServiceItem>
-							<ServiceItem style="flex:1;"></ServiceItem>
-						</div>
+						
+						<flex-row>
+							<service-item  class="FlexOne"></service-item>
+							<service-item class="FlexOne"></service-item>
+						</flex-row>
+						<flex-row>
+							<service-item  class="FlexOne"></service-item>
+							<service-item class="FlexOne"></service-item>
+						</flex-row>
+						<flex-row>
+							<service-item  class="FlexOne"></service-item>
+							<service-item class="FlexOne"></service-item>
+						</flex-row>
 
 					</div>
 					
 					
 					<div class=" ServiceRight FlexTwo " style="background-color:#FFFFFF;height: 100%; position: relative;">
 						<MTitle></MTitle>
-						<Current :title="123" :money="'hell'" ></Current>
+						<Current :title="'123'" :money="'hell'" ></Current>
+					     <div style="display: flex;">
+							 <LineChart>						 
+							 </LineChart>
+						 </div>
+						
 					</div>
 				</div>
 			</div>
@@ -54,7 +61,7 @@
 
 				<Transaction v-for="(Transaction,index) in TransactionList" style="margin-top:0.625rem" image="../../assets/diqiu.png"
 				 content="hello" money="-12"></Transaction>
-				<ButtonI style="margin-top: 0.625rem;margin-left: 0.625rem;margin-right: 0.625rem;"></ButtonI>
+				<ButtonI style="margin: 0.625rem;"></ButtonI>
 			
 			</div>
 			
@@ -72,6 +79,8 @@
 	import Card from "./components/app/Card.vue"
 	import MTitle from "./components/app/MTiltle.vue"
 	import Current from "./components/app/Current.vue"
+	import LineChart from "./components/app/lineChart.vue"
+	import FlexRow from "./components/app/FlexRow.vue"
 	export default {
 		name: 'app',
 		components: {
@@ -82,7 +91,9 @@
 			Transaction,
 			Card,
 			MTitle,
-			Current
+			Current,
+			LineChart,
+			FlexRow
 		},
 		data: function() {
 			return {
@@ -100,7 +111,7 @@
 		mounted() {
 
 		},
-		methods: function() {
+		methods: {
 
 		}
 	}
@@ -120,18 +131,20 @@
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
-		min-height: 64rem;
-		min-width: 64rem;
+		min-height: 54rem;
+		min-width: 84rem;
 		
 
 	}
 
 	.main {
 		width: 80%;
-		height: 60%;
+		height: 70%;
 		display: flex;
 		background-color: white;
 		border-radius: 1.5rem;
+		-moz-box-shadow: 10px 10px 5px #888888; /* 老的 Firefox */
+		box-shadow: 10px 10px 5px #888888;
 		
 	}
 
@@ -147,6 +160,8 @@
 		background-color: white;
 		border-radius: 1rem;
 		text-align: center;
+		border: 1px #000000 solid;
+		margin-left: 0.625rem;
 		/* display: flex; */
 		/* align-items: center; */
 
@@ -173,7 +188,7 @@
 
 	}
 
-	.ServiceM {
+	.ServiceLeft {
 
 		border-radius: 0.55rem;
 		background-color: aliceblue;
